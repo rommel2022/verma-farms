@@ -1,0 +1,21 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Font family
+$main-font-family: 'Tisa Sans',
+sans-serif !default;
+
+/// Text color
+$main-text-color: rgb(68, 54, 54) !default;
+$sub-text-color: rgb(162, 147, 130) !default;
+$white: rgb(254, 250, 248);
+$orange: rgb(246, 145, 78);
+$green: rgb(60, 86, 44);
+$brown: rgb(106, 95, 95);
+$light-brown: rgb(246, 240, 239);
+$grey: rgba(219, 217, 206, 0.3);
+$description: rgb(203, 178, 163);
+
+/// Container's maximum width
+$max-width: 1700px !default;

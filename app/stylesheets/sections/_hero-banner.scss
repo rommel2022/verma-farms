@@ -1,0 +1,71 @@
+section.hero-banner {
+    display: flex;
+    align-items: center;
+    height: 120vh;
+    background-image: url('../assets/images/hero/homepage-bg.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include respond-to('xxs') {
+        padding: 30px;
+        padding-top: 70px;
+        height: initial;
+        background-image: initial;
+        background-color: rgb(237, 211, 193);
+    }
+
+    div.container {
+        @include respond-to('xxs') {
+            text-align: center;
+        }
+
+        img {
+            display: none;
+            width: 100%;
+            margin-bottom: 20px;
+
+            @include respond-to('xxs') {
+                display: initial;
+            }
+        }
+
+        div.row {
+            div.left-col {
+
+                h1.title {
+                    margin-bottom: 30px;
+                    font-size: 70px;
+                    font-weight: 800;
+
+                    @include respond-to('xxs') {
+                        font-size: 30px;
+                    }
+                }
+
+                h3.subtitle {
+                    margin-bottom: 30px;
+                    color: $sub-text-color;
+                    font-size: 30px;
+
+                    @include respond-to('xxs') {
+                        font-size: 18px;
+                    }
+                }
+
+                a.cta-button {
+                    margin: initial;
+                    margin-left: 20px;
+                    padding: 20px;
+                    width: 300px;
+
+                    @include respond-to('xxs') {
+                        padding: 15px;
+                        margin: initial;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,90 @@
+section.verma-benefits {
+    padding: 100px 0;
+    background-color: rgb(252, 244, 239);
+    text-align: center;
+
+    @include respond-to('xxs') {
+        padding: 50px 0;
+    }
+
+    div.content {
+        margin-bottom: 50px;
+        width: 600px;
+
+        @include respond-to('xxs') {
+            width: 100%;
+        }
+
+        h2.title {
+            margin-bottom: 40px;
+            font-size: 50px;
+            font-weight: 800;
+
+            @include respond-to('xxs') {
+                margin-bottom: 20px;
+                font-size: 25px;
+            }
+        }
+
+        p.description {
+            color: $description;
+            font-size: 24px;
+            font-weight: 400;
+
+            @include respond-to('xxs') {
+                font-size: 15px;
+            }
+        }
+    }
+
+    div.cards {
+        div.row {
+            [class*='col-'] {
+                padding: 0 50px;
+
+                @include respond-to('xxs') {
+                    padding: 0 30px;
+                    margin-bottom: 30px;
+                }
+
+                div.card {
+                    border: initial;
+                    border-radius: 50px;
+                    box-shadow: 0 20px 50px 0px rgba(0, 0, 0, 0.1);
+                    overflow: hidden;
+
+                    @include respond-to('xxs') {
+                        border-radius: 30px;
+                    }
+
+                    img.card-img-top {
+                        height: 530px;
+                        object-fit: cover;
+
+                        @include respond-to('xxs') {
+                            height: 300px;
+                        }
+                    }
+
+                    div.card-body {
+                        padding: 20px 75px;
+
+                        @include respond-to('xxs') {
+                            padding: 25px;
+                        }
+
+                        p.card-text {
+                            color: $brown;
+                            font-size: 30px;
+                            font-weight: 500;
+
+                            @include respond-to('xxs') {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

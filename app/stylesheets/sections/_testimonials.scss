@@ -1,0 +1,110 @@
+section.testimonials {
+    padding: 100px 0;
+    background-color: rgb(254, 250, 248);
+
+    @include respond-to('xxs') {
+        padding: 50px 0;
+    }
+
+    div.container {
+        h2.title {
+            margin-bottom: 100px;
+            font-size: 50px;
+            font-weight: 800;
+            text-align: center;
+
+            @include respond-to('xxs') {
+                margin-bottom: 50px;
+                font-size: 25px;
+            }
+        }
+
+        ul.carousel-container {
+            display: flex;
+
+            @include respond-to('xxs') {
+                display: initial;
+            }
+
+            li.item {
+                position: relative;
+                padding: 100px 30px 30px;
+                margin: 0 15px;
+                background-color: $light-brown;
+                text-align: center;
+                border-radius: 50px;
+
+                @include respond-to('xxs') {
+                    margin-bottom: 30px;
+                }
+
+                img.quotation-top-left {
+                    position: absolute;
+                    top: 0;
+                    left: -15px;
+                    height: 2.4em;
+                }
+
+                img.quotation-bottom-right {
+                    position: absolute;
+                    bottom: 0;
+                    right: -15px;
+                    height: 2.4em;
+                    transform: scaleX(-1);
+                }
+
+                img.product-image {
+                    margin-bottom: 50px;
+                    width: 12em;
+
+                    @include respond-to('xxs') {
+                        width: 10em;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                p.product-name {
+                    margin-bottom: 20px;
+                    color: $green;
+                    font-size: 30px;
+                    font-weight: 500;
+
+                    @include respond-to('xxs') {
+                        font-size: 20px;
+                    }
+                }
+
+                p.product-description {
+                    margin-bottom: 40px;
+                    color: $description;
+                    font-size: 24px;
+                    font-weight: 400;
+
+                    @include respond-to('xxs') {
+                        margin-bottom: 20px;
+                        font-size: 18px;
+                    }
+                }
+
+                img.logo {
+                    margin-bottom: 30px;
+                    height: 4em;
+
+                    @include respond-to('xxs') {
+                        margin-bottom: 20px;
+                    }
+                }
+
+                p.customer-name {
+                    color: $green;
+                    font-size: 22px;
+                    font-weight: 600;
+
+                    @include respond-to('xxs') {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

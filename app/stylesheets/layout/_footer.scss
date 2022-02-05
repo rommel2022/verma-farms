@@ -1,0 +1,176 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+footer.main-footer {
+    div.upper-footer {
+        padding: 50px 100px;
+        display: flex;
+        background-color: rgb(237, 211, 193);
+
+        @include respond-to('xxs') {
+            padding: 20px;
+            justify-content: space-between;
+        }
+
+        div.item {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:first-child {
+                justify-content: flex-start;
+
+                @include respond-to('xxs') {
+                    display: none;
+                }
+            }
+
+            &:last-child {
+                justify-content: flex-end;
+            }
+
+            a.back-to-top {
+                padding: 10px 40px;
+                color: $sub-text-color;
+                font-size: 22px;
+                font-weight: 500;
+                letter-spacing: 2px;
+                border: 1px solid $sub-text-color;
+                border-radius: 5px;
+
+                &:hover,
+                &:active,
+                &:focus {
+                    color: $white;
+                    background-color: $main-text-color;
+                    transition: all 0.5s ease;
+                }
+            }
+
+            img {
+                height: 7em;
+
+                @include respond-to('xxs') {
+                    height: 5em;
+                }
+            }
+
+            a.go-to {
+                display: flex;
+                align-items: center;
+
+                span {
+                    margin-right: 30px;
+                    font-size: 50px;
+                    font-weight: 800;
+
+                    @include respond-to('xxs') {
+                        margin-right: 10px;
+                        font-size: 30px;
+                    }
+                }
+
+                img {
+                    height: 2em;
+
+                    @include respond-to('xxs') {
+                        height: 1.5em;
+                    }
+                }
+            }
+        }
+
+        div.mid {
+            @include respond-to('xxs') {
+                flex: initial;
+            }
+        }
+    }
+
+    div.lower-footer {
+        padding: 100px 0;
+        background-color: rgb(60, 86, 44);
+
+        @include respond-to('xxs') {
+            padding: 50px 0;
+        }
+
+        div.container {
+            text-align: center;
+
+            ul.footer-nav {
+                margin-bottom: 100px;
+                display: flex;
+                justify-content: space-around;
+
+                @include respond-to('xxs') {
+                    margin-bottom: 20px;
+                    flex-direction: column;
+                }
+
+                li.footer-nav-item {
+                    @include respond-to('xxs') {
+                        margin-bottom: 30px;
+                    }
+
+                    a {
+                        color: $white;
+                        font-size: 26px;
+                        font-weight: 400;
+
+                        &:hover,
+                        &:active,
+                        &:focus {
+                            color: $grey;
+                            transition: all 0.5s ease;
+                        }
+                    }
+                }
+            }
+
+            a {
+                img {
+                    margin-bottom: 100px;
+                    height: 2em;
+
+                    @include respond-to('xxs') {
+                        margin-bottom: 50px;
+                        height: 1.5em;
+                    }
+                }
+            }
+
+            ul.policy-nav {
+                display: flex;
+                justify-content: center;
+
+                @include respond-to('xxs') {
+                    flex-direction: column;
+                }
+
+                li.policy-nav-item {
+                    margin: 0 15px;
+
+                    @include respond-to('xxs') {
+                        margin-bottom: 20px;
+                    }
+
+                    a {
+                        color: $grey;
+                        font-size: 24px;
+                        font-weight: 400;
+
+                        &:hover,
+                        &:active,
+                        &:focus {
+                            color: $white;
+                            transition: all 0.5s ease;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

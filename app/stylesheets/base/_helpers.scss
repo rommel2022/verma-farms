@@ -1,0 +1,33 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+.container {
+    max-width: $max-width;
+}
+
+.cta-button {
+    display: block;
+    margin: 0 auto;
+    padding: 25px;
+    width: 400px;
+    color: $white;
+    font-size: 22px;
+    text-align: center;
+    background-color: $orange;
+    border-radius: 10px;
+    border: 1px solid $orange;
+    box-shadow: 0 40px 40px 0px rgba(0, 0, 0, 0.2);
+
+    @include respond-to('xxs') {
+        padding: 20px;
+        width: 100%;
+        font-size: 18px;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $white;
+    }
+}

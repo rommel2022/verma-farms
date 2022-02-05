@@ -1,0 +1,114 @@
+section.about-cbd {
+    padding: 100px 0;
+    background-color: rgb(254, 250, 248);
+    text-align: center;
+
+    @include respond-to('xxs') {
+        padding: 50px 0;
+    }
+
+    div.content {
+        margin-bottom: 50px;
+        width: 600px;
+
+        @include respond-to('xxs') {
+            width: 100%;
+        }
+
+        img.about-logo {
+            margin-bottom: 20px;
+            height: 4em;
+            object-fit: contain;
+        }
+
+        h2.title {
+            margin-bottom: 40px;
+            font-size: 50px;
+            font-weight: 800;
+
+            @include respond-to('xxs') {
+                margin-bottom: 20px;
+                font-size: 25px;
+            }
+        }
+
+        p.description {
+            color: $description;
+            font-size: 24px;
+            font-weight: 400;
+
+            @include respond-to('xxs') {
+                font-size: 15px;
+            }
+        }
+    }
+
+    div.bowl {
+        div.row {
+            margin-bottom: 50px;
+
+            [class*='col-md-3'] {
+
+                @include respond-to('xxs') {
+                    display: none;
+                }
+
+                div.block {
+                    height: 500px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        margin-bottom: 30px;
+                        height: 5em;
+                    }
+
+                    h4 {
+                        color: $brown;
+                        margin-bottom: 20px;
+
+                        &:after {
+                            content: "";
+                            display: block;
+                            margin: 0 auto;
+                            width: 270px;
+                            padding-top: 20px;
+                            border-bottom: 4px solid $orange;
+                        }
+                    }
+
+                    p {
+                        color: $description;
+                        font-size: 24px;
+                        font-weight: 400;
+                    }
+                }
+            }
+
+            [class*='col-md-6'] {
+                img {
+                    width: 65%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        a.cta-button {
+            background-color: $green;
+            border: 1px solid $green;
+            box-shadow: initial;
+            letter-spacing: 2px;
+
+            &:hover,
+            &:active,
+            &:focus {
+                color: $green;
+                background-color: initial;
+                transition: all 0.5s ease;
+            }
+        }
+    }
+}

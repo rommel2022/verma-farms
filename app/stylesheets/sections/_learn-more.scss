@@ -1,0 +1,111 @@
+section.learn-more {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(250, 234, 216);
+
+    @include respond-to('xxs') {
+        height: initial;
+        padding: 50px 0;
+    }
+
+    img.palm-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 70%;
+
+        @include respond-to('xxs') {
+            height: 30%;
+        }
+    }
+
+    img.palm-right {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 70%;
+
+        @include respond-to('xxs') {
+            bottom: 300px;
+            height: 30%;
+        }
+    }
+
+    div.container {
+        @include respond-to('xxs') {
+            text-align: center;
+        }
+
+        div.row {
+            div.left-col {
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            div.right-col {
+                display: flex;
+                align-items: center;
+
+                div.text-container {
+                    margin: 0 80px 0 50px;
+
+                    @include respond-to('xxs') {
+                        margin: initial;
+                    }
+
+                    h3.subtitle {
+                        margin-bottom: 20px;
+                        color: $sub-text-color;
+                        font-size: 30px;
+                        font-weight: 400;
+
+                        @include respond-to('xxs') {
+                            margin-bottom: 10px;
+                            font-size: 18px;
+                        }
+                    }
+
+                    h2.title {
+                        margin-bottom: 40px;
+                        font-size: 50px;
+                        font-weight: 800;
+
+                        @include respond-to('xxs') {
+                            font-size: 25px;
+                        }
+                    }
+
+                    p.description {
+                        margin-bottom: 50px;
+                        color: $description;
+                        font-size: 24px;
+                        font-weight: 400;
+
+                        @include respond-to('xxs') {
+                            font-size: 15px;
+                        }
+                    }
+
+                    a.cta-button {
+                        box-shadow: initial;
+                        margin: initial;
+                        letter-spacing: 2px;
+
+                        &:hover,
+                        &:active,
+                        &:focus {
+                            color: $orange;
+                            background-color: initial;
+                            transition: all 0.5s ease;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
